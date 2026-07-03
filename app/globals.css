@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap');
+
+/* ---- CUSTOM FONTS CONFIGURATION ---- */
+@font-face {
+  font-family: 'Brittany Signature';
+  src: url('/fonts/brittany-signature.woff2') format('woff2'),
+       url('/fonts/brittany-signature.woff') format('woff'),
+       url('/fonts/brittany-signature.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Canela Light';
+  src: url('/fonts/canela-light.woff2') format('woff2'),
+       url('/fonts/canela-light.woff') format('woff'),
+       url('/fonts/canela-light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Canela Thin';
+  src: url('/fonts/canela-thin.woff2') format('woff2'),
+       url('/fonts/canela-thin.woff') format('woff'),
+       url('/fonts/canela-thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Canela';
+  src: url('/fonts/canela-regular.woff2') format('woff2'),
+       url('/fonts/canela-regular.woff') format('woff'),
+       url('/fonts/canela-regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --color-primary: #00382C;
+  --color-beige: #F7F5F1;
+  --color-white: #ffffff;
+  --color-primary-light: rgba(0, 56, 44, 0.08);
+  --color-primary-mid: rgba(0, 56, 44, 0.15);
+  --font-main: 'Manrope', sans-serif;
+  --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-beige);
+  color: var(--color-primary);
+  transition: background-color 0.8s ease;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.bg-green {
+  background-color: var(--color-primary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---- TYPOGRAPHY ---- */
+.script-font {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.handwriting {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  transform: rotate(-3deg);
+  display: inline-block;
+}
+
+/* ---- PAGE TRANSITION ---- */
+.page-transition-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* ---- SCROLLBAR ---- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-beige);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 3px;
+}
+
+/* ---- UTILITY CLASSES ---- */
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 50px;
+  font-family: var(--font-main);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  border: 1.5px solid transparent;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-beige);
+  border-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-primary);
+  color: var(--color-beige);
+  text-decoration: none;
+}
+
+.btn-outline-white {
+  background-color: transparent;
+  color: var(--color-beige);
+  border-color: var(--color-beige);
+}
+
+.btn-outline-white:hover {
+  background-color: var(--color-beige);
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+/* ---- SECTION DIVIDER ---- */
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0, 56, 44, 0.15);
+}
+
+.divider-white {
+  background-color: rgba(247, 245, 241, 0.2);
+}
+
+/* ---- PROGRESS BAR ---- */
+.swiper-progress {
+  height: 4px;
+  background: rgba(0, 56, 44, 0.1);
+  border-radius: 2px;
+  margin-top: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper-progress-fill {
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
