@@ -32,7 +32,7 @@ export default function AboutSection() {
           <motion.div
             initial={{ opacity: 0, y: 60 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.9, ease: 'easeOut' }}
+            transition={{ duration: 0.9, ease: 'easeOut' as const }}
             style={{ position: 'relative' }}
           >
             {/* Main image */}
@@ -58,7 +58,7 @@ export default function AboutSection() {
             <motion.div
               initial={{ opacity: 0, x: 40, rotate: 0 }}
               animate={inView ? { opacity: 1, x: 0, rotate: 4 } : {}}
-              transition={{ duration: 0.9, delay: 0.3, ease: 'easeOut' }}
+              transition={{ duration: 0.9, delay: 0.3, ease: 'easeOut' as const }}
               style={{
                 position: 'absolute',
                 bottom: '-40px',
@@ -84,7 +84,7 @@ export default function AboutSection() {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
+            transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' as const }}
             style={{ paddingBottom: '40px' }}
           >
             <span

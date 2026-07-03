@@ -23,7 +23,7 @@ export default function NewsletterSection() {
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.9, ease: 'easeOut' }}
+        transition={{ duration: 0.9, ease: 'easeOut' as const }}
         style={{
           fontFamily: '"Canela Light", "Canela", serif',
           fontSize: 'clamp(28px, 4vw, 40px)',
@@ -43,7 +43,7 @@ export default function NewsletterSection() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
+        transition={{ duration: 0.8, ease: 'easeOut' as const, delay: 0.2 }}
       >
         <a
           href="#subscribe"

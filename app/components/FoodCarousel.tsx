@@ -133,7 +133,7 @@ export default function FoodCarousel() {
             initial={{ opacity: 0, x: 80 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -80 }}
-            transition={{ duration: 0.6, ease: 'easeOut' }}
+            transition={{ duration: 0.6, ease: 'easeOut' as const }}
             style={{
               display: 'grid',
               gridTemplateColumns: '1.2fr 1fr',

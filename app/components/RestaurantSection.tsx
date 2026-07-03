@@ -31,7 +31,7 @@ export default function RestaurantSection() {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
+            transition={{ duration: 0.8, ease: 'easeOut' as const }}
           >
             <span
               style={{
@@ -127,7 +127,7 @@ export default function RestaurantSection() {
           <motion.div
             initial={{ opacity: 0, x: 50, rotate: 0 }}
             animate={inView ? { opacity: 1, x: 0, rotate: 2 } : {}}
-            transition={{ duration: 0.9, ease: 'easeOut', delay: 0.2 }}
+            transition={{ duration: 0.9, ease: 'easeOut' as const, delay: 0.2 }}
             style={{
               borderRadius: '4px',
               overflow: 'hidden',

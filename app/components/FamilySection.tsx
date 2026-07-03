@@ -37,7 +37,7 @@ export default function FamilySection() {
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
+          transition={{ duration: 0.8, ease: 'easeOut' as const }}
           style={{
             fontFamily: '"Canela Light", "Canela", serif',
             fontSize: 'clamp(40px, 5vw, 64px)',
@@ -52,7 +52,7 @@ export default function FamilySection() {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
+          transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' as const }}
           style={{
             fontFamily: 'Manrope, sans-serif',
             fontSize: 'clamp(16px, 1.5vw, 20px)',
@@ -69,7 +69,7 @@ export default function FamilySection() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}
+          transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' as const }}
         >
           <a
             href="#famiglia"

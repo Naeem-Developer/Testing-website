@@ -24,7 +24,7 @@ export default function ContactSection() {
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.9, ease: 'easeOut' }}
+        transition={{ duration: 0.9, ease: 'easeOut' as const }}
         style={{
           fontFamily: '"Canela Light", "Canela", serif',
           fontSize: 'clamp(28px, 4vw, 52px)',
@@ -46,7 +46,7 @@ export default function ContactSection() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
+        transition={{ duration: 0.8, ease: 'easeOut' as const, delay: 0.2 }}
       >
         <a
           href="mailto:info@diodona.it"

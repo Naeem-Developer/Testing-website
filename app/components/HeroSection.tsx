@@ -54,7 +54,7 @@ export default function HeroSection() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: 'easeOut', delay: 0.2 }}
+          transition={{ duration: 1, ease: 'easeOut' as const, delay: 0.2 }}
           style={{
             zIndex: 10,
             textAlign: 'center',
@@ -131,7 +131,7 @@ export default function HeroSection() {
 
           <motion.div
             animate={{ y: [0, 8, 0] }}
-            transition={{ repeat: Infinity, duration: 1.5, ease: 'easeInOut' }}
+            transition={{ repeat: Infinity, duration: 1.5, ease: 'easeInOut' as const }}
             style={{
               width: '1px',
               height: '40px',

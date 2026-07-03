@@ -11,7 +11,7 @@ export default function LocationSection() {
   const fadeUp = (delay = 0) => ({
     initial: { opacity: 0, y: 40 },
     animate: inView ? { opacity: 1, y: 0 } : {},
-    transition: { duration: 0.9, ease: 'easeOut', delay },
+    transition: { duration: 0.9, ease: 'easeOut' as const, delay },
   });
 
   return (

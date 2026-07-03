@@ -65,7 +65,7 @@ export default function DishesSection() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.9, ease: 'easeOut' }}
+              transition={{ duration: 0.9, ease: 'easeOut' as const }}
               style={{
                 fontFamily: '"Canela Light", "Canela", serif',
                 fontSize: 'clamp(28px, 4.5vw, 50px)',
