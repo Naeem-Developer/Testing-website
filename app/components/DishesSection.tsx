@@ -103,9 +103,10 @@ export default function DishesSection() {
           }}
         >
           <Image
-            src="/wedding-event.jpg"
+            src="/wedding-event.webp"
             alt="Dish presentation"
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
             style={{ objectFit: 'cover' }}
           />
         </motion.div>
@@ -130,9 +131,10 @@ export default function DishesSection() {
           }}
         >
           <Image
-            src="/restaurant-interior.jpg"
+            src="/restaurant-interior.webp"
             alt="Dish presentation"
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
             style={{ objectFit: 'cover' }}
           />
         </motion.div>

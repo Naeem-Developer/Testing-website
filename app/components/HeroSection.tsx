@@ -5,10 +5,10 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
 
 const images = [
-  "/wedding-event.jpg",
-  "/limonaia.jpg",
-  "/restaurant-interior.jpg",
-  "/hero-bg.jpg"
+  "/wedding-event.webp",
+  "/limonaia.webp",
+  "/restaurant-interior.webp",
+  "/hero-bg.webp"
 ];
 
 export default function HeroSection() {
@@ -104,6 +104,7 @@ export default function HeroSection() {
                     src={src}
                     alt={`Landscape ${index + 1}`}
                     fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
                     style={{ objectFit: 'cover' }}
                     priority={index === 0}
                   />

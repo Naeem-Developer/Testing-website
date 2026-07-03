@@ -137,9 +137,10 @@ export default function RestaurantSection() {
             }}
           >
             <Image
-              src="/restaurant-interior.jpg"
+              src="/restaurant-interior.webp"
               alt="Interno del ristorante Diodona"
               fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
               style={{ objectFit: 'cover' }}
             />
           </motion.div>

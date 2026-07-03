@@ -121,9 +121,10 @@ export default function FamilySection() {
           style={{ flex: '1 1 500px', maxWidth: '600px', height: '450px', position: 'relative', borderRadius: '4px', overflow: 'hidden', y: yLeft, x: xLeft, rotate: -2, boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}
         >
           <Image
-            src="/wedding-event.jpg"
+            src="/wedding-event.webp"
             alt="Family member"
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
             style={{ objectFit: 'cover' }}
           />
         </motion.div>
@@ -134,9 +135,10 @@ export default function FamilySection() {
           style={{ flex: '0 0 350px', height: '520px', position: 'relative', borderRadius: '4px', overflow: 'hidden', y: yRight, x: xRight, rotate: 2, boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}
         >
           <Image
-            src="/restaurant-interior.jpg"
+            src="/restaurant-interior.webp"
             alt="Family member"
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
             style={{ objectFit: 'cover' }}
           />
         </motion.div>

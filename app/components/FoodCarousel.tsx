@@ -5,10 +5,10 @@ import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 
 const dishes = [
-  { src: '/food-dish1.jpg', title: 'Pasta al Tartufo', desc: 'Pappardelle fresche, tartufo nero, parmigiano reggiano 36 mesi' },
-  { src: '/food-dish2.jpg', title: 'Risotto allo Zafferano', desc: 'Riso Carnaroli, zafferano di Varese, gamberi rossi di Mazara' },
-  { src: '/restaurant-interior.jpg', title: 'Filetto di Manzo', desc: 'Fassona piemontese, riduzione al Barolo, tartufo bianco d\'Alba' },
-  { src: '/hero-bg.jpg', title: 'Dolce della Tradizione', desc: 'Tiramisù della nonna, caffè selezionato, mascarpone artigianale' },
+  { src: '/food-dish1.webp', title: 'Pasta al Tartufo', desc: 'Pappardelle fresche, tartufo nero, parmigiano reggiano 36 mesi' },
+  { src: '/food-dish2.webp', title: 'Risotto allo Zafferano', desc: 'Riso Carnaroli, zafferano di Varese, gamberi rossi di Mazara' },
+  { src: '/restaurant-interior.webp', title: 'Filetto di Manzo', desc: 'Fassona piemontese, riduzione al Barolo, tartufo bianco d\'Alba' },
+  { src: '/hero-bg.webp', title: 'Dolce della Tradizione', desc: 'Tiramisù della nonna, caffè selezionato, mascarpone artigianale' },
 ];
 
 export default function FoodCarousel() {
@@ -154,6 +154,7 @@ export default function FoodCarousel() {
                 src={dishes[current].src}
                 alt={dishes[current].title}
                 fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
                 style={{ objectFit: 'cover' }}
               />
             </div>

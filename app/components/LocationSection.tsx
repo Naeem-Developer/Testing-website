@@ -73,7 +73,7 @@ export default function LocationSection() {
         }}
       >
         <Image
-          src="/wedding-event.jpg"
+          src="/wedding-event.webp"
           alt="Tailor-made events at Diodona"
           width={760}
           height={560}

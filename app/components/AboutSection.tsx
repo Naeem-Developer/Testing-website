@@ -48,9 +48,10 @@ export default function AboutSection() {
               }}
             >
               <Image
-                src="/restaurant-interior.jpg"
+                src="/restaurant-interior.webp"
                 alt="Diodona - La nostra famiglia"
                 fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
                 style={{ objectFit: 'cover' }}
               />
             </div>
@@ -72,9 +73,10 @@ export default function AboutSection() {
               }}
             >
               <Image
-                src="/food-dish1.jpg"
+                src="/food-dish1.webp"
                 alt="I piatti di Diodona"
                 fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
                 style={{ objectFit: 'cover' }}
               />
             </motion.div>
