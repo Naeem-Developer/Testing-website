@@ -17,6 +17,8 @@ import ContactSection from './components/ContactSection';
 import EventsSection from './components/EventsSection';
 import NewsletterSection from './components/NewsletterSection';
 import Footer from './components/Footer';
+import PageLoader from './components/PageLoader';
+import SectionLoader from './components/SectionLoader';
 
 export default function Home() {
   // Scroll-triggered body background color change (mirrors original Diodona behavior)
@@ -72,6 +74,9 @@ export default function Home() {
 
   return (
     <main>
+      {/* Full-page brand loader shown on initial visit */}
+      <PageLoader />
+
       <Header />
       <section style={{ backgroundColor: 'white', paddingTop: '200px', paddingBottom: '100px' }}>
         <h1
@@ -90,20 +95,55 @@ export default function Home() {
           Diodona is magic, flavors, nature, passion.
         </h1>
       </section>
+
+      {/* Hero loads immediately — no skeleton needed */}
       <HeroSection />
-      <WelcomeSection />
-      <FamilySection />
-      <DishesSection />
-      <RestaurantMenuSection />
-      <SpacesSection />
-      <SpacesImagesSection />
+
+      {/* Below-fold sections get skeleton loaders */}
+      <SectionLoader height="600px">
+        <WelcomeSection />
+      </SectionLoader>
+
+      <SectionLoader height="700px">
+        <FamilySection />
+      </SectionLoader>
+
+      <SectionLoader height="600px">
+        <DishesSection />
+      </SectionLoader>
+
+      <SectionLoader dark height="700px">
+        <RestaurantMenuSection />
+      </SectionLoader>
+
+      <SectionLoader height="500px">
+        <SpacesSection />
+      </SectionLoader>
+
+      <SectionLoader height="250vh">
+        <SpacesImagesSection />
+      </SectionLoader>
+
       {/* <RestaurantSection /> */}
       {/* <FoodCarousel /> */}
       {/* <AboutSection /> */}
-      <LocationSection />
-      <ContactSection />
-      <EventsSection />
-      <NewsletterSection />
+
+      <SectionLoader dark height="800px">
+        <LocationSection />
+      </SectionLoader>
+
+      <SectionLoader height="700px">
+        <ContactSection />
+      </SectionLoader>
+
+      <SectionLoader dark height="700px">
+        <EventsSection />
+      </SectionLoader>
+
+      <SectionLoader dark height="500px">
+        <NewsletterSection />
+      </SectionLoader>
+
       <Footer />
     </main>
   );
